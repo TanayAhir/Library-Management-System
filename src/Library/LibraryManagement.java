@@ -7,6 +7,11 @@ public class LibraryManagement {
     public static ArrayList<Books> borrowedBooks = new ArrayList<>();
 
     public void addBook(Books book) {
-        availableBooks.add(book);
+        if(availableBooks.contains(book)) {
+            System.out.println("Book already available");
+            return;
+        }
+        else
+            availableBooks.add(book);
     }
 }
