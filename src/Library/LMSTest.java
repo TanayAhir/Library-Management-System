@@ -34,4 +34,11 @@ public class LMSTest {
                 "Adding a book with duplicate ISBN should thrown an IllegalArgumentException");
     }
 
+    @Test
+    public void addBookWithEmptyAuthorTest() {
+        Books book = new Books(null, "Introduction to Algorithms", "978-0262033848", "2009");
+        assertThrows(IllegalArgumentException.class, () -> lms.addBook(book),
+                "Adding a book with empty author name should throw an IllegalArgumentException");
+    }
+
 }
