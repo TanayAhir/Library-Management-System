@@ -30,4 +30,13 @@ public class LMSTest {
         lms.addBook(book2);
 
     }
+
+    @Test
+    public void booksWithSameISBN(){
+        lms = new LibraryManagement();
+        Books book1 = new Books("J.K. Rowling", "Harry Potter and the Philosopher's Stone", "9780747532699", "1997");
+        Books book2 = new Books("J.K. Rowling", "Harry Potter and the Sorcerer's Stone", "9780747532699", "1998");
+        lms.addBook(book1);
+        lms.addBook(book2);
+    }
 }
