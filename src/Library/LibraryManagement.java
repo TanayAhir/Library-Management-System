@@ -11,6 +11,8 @@ public class LibraryManagement {
             if(ab.getISBN().equals(book.getISBN())) {
                 throw new IllegalArgumentException("A book with this ISBN already exists.");
             }
+
         }
+        availableBooks.add(book);
     }
 }
