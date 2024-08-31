@@ -16,6 +16,7 @@ public class LMSTest {
     }
     @Test
     public void addBook(){
+        lms = new LibraryManagement();
         Books book = new Books("J.K. Rowling", "Harry Potter and the Sorcerer's Stone", "978-0439708180", "1997");
         lms.addBook(book);
     }
